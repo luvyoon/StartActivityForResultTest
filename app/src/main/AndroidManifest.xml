@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditUserInfoActivity"></activity>
+        <activity android:name=".EditUserInfoActivity" />
+        <activity android:name=".BirthdayInputActivity"></activity>
     </application>
 
 </manifest>
