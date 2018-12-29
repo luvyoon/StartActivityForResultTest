@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,17 +13,21 @@ public class MainActivity extends BaseActivity {
 
     final static int REQUEST_FOR_USER_NAME = 1000;
     final static int REQUEST_FOR_USER_BIRTHDAY = 1001;
+    final static int REQUEST_FOR_PICTURE_GALLERY = 1002;
 
     private android.widget.TextView mainTxt;
     private android.widget.Button nameInputBtn;
     private TextView birthdayTxt;
     private Button birthdayBtn;
+    private android.widget.ImageView profileImg;
+    private Button cameraBtn;
+    private Button galleryBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
 
         bindviews();
         setupEvents();
@@ -80,6 +85,26 @@ public class MainActivity extends BaseActivity {
             }
         });
 
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
+        galleryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent,REQUEST_FOR_PICTURE_GALLERY);
+
+            }
+        });
+
     }
 
     @Override
@@ -90,6 +115,9 @@ public class MainActivity extends BaseActivity {
     @Override
     public void bindviews() {
 
+        this.galleryBtn = (Button) findViewById(R.id.galleryBtn);
+        this.cameraBtn = (Button) findViewById(R.id.cameraBtn);
+        this.profileImg = (ImageView) findViewById(R.id.profileImg);
         this.birthdayBtn = (Button) findViewById(R.id.birthdayBtn);
         this.birthdayTxt = (TextView) findViewById(R.id.birthdayTxt);
         this.nameInputBtn = (Button) findViewById(R.id.nameInputBtn);

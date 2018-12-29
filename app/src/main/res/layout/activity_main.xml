@@ -43,6 +43,26 @@
         android:layout_height="wrap_content"
         android:text="생년월일 입력받기"/>
 
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <Button
+        android:id="@+id/cameraBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카메라에서 이미지 가져오기"/>
+
+    <Button
+        android:id="@+id/galleryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="갤러리에서 이미지 가져오기"
+
+        />
+
 
 
 </LinearLayout>
