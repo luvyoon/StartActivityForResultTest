@@ -7,6 +7,24 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"/>
+
+    <TextView
+        android:id="@+id/mainTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="하단의 버튼을 터치하여 이름을 적어주세요"/>
+
+    <Button
+        android:id="@+id/nameInputBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이름 입력하는 화면으로 이동"/>
+
 
 
 </LinearLayout>
